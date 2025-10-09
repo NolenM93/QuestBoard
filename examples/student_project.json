@@ -1,0 +1,141 @@
+{
+  "team": {
+    "name": "CS Senior Project Team",
+    "description": "Building our capstone project for graduation",
+    "mascot": {
+      "name": "Professor Code",
+      "type": "Ninja Turtle",
+      "skin": "default"
+    }
+  },
+  "members": [
+    {
+      "username": "emily_lead",
+      "display_name": "Emily Rodriguez",
+      "role": "Team Lead",
+      "avatar": "👩‍🎓"
+    },
+    {
+      "username": "frank_backend",
+      "display_name": "Frank Lee",
+      "role": "Backend Developer",
+      "avatar": "👨‍💻"
+    },
+    {
+      "username": "grace_frontend",
+      "display_name": "Grace Kim",
+      "role": "Frontend Developer",
+      "avatar": "👩‍💻"
+    },
+    {
+      "username": "henry_ml",
+      "display_name": "Henry Patel",
+      "role": "ML Engineer",
+      "avatar": "🤖"
+    },
+    {
+      "username": "iris_qa",
+      "display_name": "Iris Chen",
+      "role": "QA & Testing",
+      "avatar": "🔍"
+    }
+  ],
+  "sample_quests": [
+    {
+      "title": "Project Proposal Draft",
+      "description": "Write initial project proposal for professor review",
+      "difficulty": "Medium",
+      "quest_type": "Documentation",
+      "assigned_to": "emily_lead",
+      "tags": ["documentation", "academic", "proposal"]
+    },
+    {
+      "title": "Technology Stack Research",
+      "description": "Research and compare potential tech stacks",
+      "difficulty": "Easy",
+      "quest_type": "Learn",
+      "assigned_to": "frank_backend",
+      "tags": ["research", "planning", "technology"]
+    },
+    {
+      "title": "UI Mockups",
+      "description": "Create wireframes and mockups for main user flows",
+      "difficulty": "Medium",
+      "quest_type": "Build",
+      "assigned_to": "grace_frontend",
+      "tags": ["design", "ui", "mockups"]
+    },
+    {
+      "title": "Dataset Collection",
+      "description": "Gather and clean dataset for ML model training",
+      "difficulty": "Hard",
+      "quest_type": "Build",
+      "assigned_to": "henry_ml",
+      "tags": ["machine-learning", "data", "preprocessing"]
+    },
+    {
+      "title": "Test Plan Creation",
+      "description": "Develop comprehensive testing strategy",
+      "difficulty": "Medium",
+      "quest_type": "Brainstorm",
+      "assigned_to": "iris_qa",
+      "tags": ["testing", "qa", "planning"]
+    },
+    {
+      "title": "Database Schema Design",
+      "description": "Design normalized database schema",
+      "difficulty": "Medium",
+      "quest_type": "Build",
+      "assigned_to": "frank_backend",
+      "tags": ["database", "design", "backend"]
+    },
+    {
+      "title": "React Component Library",
+      "description": "Build reusable component library with Storybook",
+      "difficulty": "Hard",
+      "quest_type": "Build",
+      "assigned_to": "grace_frontend",
+      "tags": ["frontend", "react", "components"]
+    },
+    {
+      "title": "Model Training Pipeline",
+      "description": "Set up automated ML model training pipeline",
+      "difficulty": "Epic",
+      "quest_type": "Build",
+      "assigned_to": "henry_ml",
+      "tags": ["machine-learning", "automation", "pipeline"]
+    },
+    {
+      "title": "Integration Testing",
+      "description": "Write integration tests for API endpoints",
+      "difficulty": "Hard",
+      "quest_type": "Build",
+      "assigned_to": "iris_qa",
+      "tags": ["testing", "integration", "api"]
+    },
+    {
+      "title": "Midterm Presentation",
+      "description": "Prepare and deliver midterm progress presentation",
+      "difficulty": "Medium",
+      "quest_type": "Promote",
+      "assigned_to": "emily_lead",
+      "tags": ["presentation", "academic", "milestone"]
+    },
+    {
+      "title": "Code Review Session",
+      "description": "Review team's code for quality and consistency",
+      "difficulty": "Easy",
+      "quest_type": "Review",
+      "assigned_to": "emily_lead",
+      "tags": ["code-review", "quality", "team"]
+    },
+    {
+      "title": "Final Report Writing",
+      "description": "Compile final project report for submission",
+      "difficulty": "Epic",
+      "quest_type": "Documentation",
+      "assigned_to": "emily_lead",
+      "tags": ["documentation", "academic", "final"]
+    }
+  ]
+}
