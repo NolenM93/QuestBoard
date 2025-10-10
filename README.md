@@ -1,260 +1,221 @@
-# QuestBoard 🎮
-**Gamified Team Progress Tracker**
+# 🎮 QuestBoard - Gamified Team Progress Tracker
 
-Transform your team's tasks, goals, and milestones into an epic adventure! QuestBoard turns productivity into a game-like experience with visual flair, mascot companions, and achievement systems.
+![QuestBoard Banner](https://img.shields.io/badge/Flutter-Cross_Platform-02569B?logo=flutter)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-In_Development-yellow.svg)
 
----
+Transform your team's productivity into an epic adventure! QuestBoard is a cross-platform application that gamifies team tasks, goals, and milestones with quests, achievements, and evolving mascot companions.
 
 ## 🧩 Core Concept
 
-QuestBoard is a cross-platform application designed for distributed teams, student groups, and startup squads. It gamifies team collaboration by turning everyday tasks into quests, tracking achievements, and celebrating team progress with a companion mascot.
+QuestBoard turns everyday team work into an engaging game-like experience. Perfect for:
+- 🎓 **Student Development Teams** managing capstone projects
+- 🚀 **Remote Startups** gamifying sprint cycles
+- 💻 **Hackathon Squads** tracking progress and celebrating wins
+- 👥 **Clubs & Organizations** onboarding new members with interactive quests
 
----
+## ✨ Key Features
 
-## 🛠️ Key Features
+### 📋 Quest System
+- **Quest Creation**: Transform tasks into engaging quests with custom titles, difficulty levels, and XP rewards
+- **Quest Types**: Color-coded categories (🧠 Brainstorm, 🔧 Build, 📣 Promote, 🔬 Research, 🧪 Test, 👀 Review, 📚 Learn)
+- **Difficulty Tiers**: Easy, Medium, Hard, and Epic challenges with scaling XP rewards
+- **Quest Steps**: Break down complex quests into manageable sub-tasks
+- **Dependencies**: Link quests that depend on each other
 
-### Quest Creation
-Turn tasks into quests with:
-- Custom titles and descriptions
-- Difficulty levels (Easy, Medium, Hard, Epic)
-- XP rewards based on complexity
-- Quest types: 🧠 Brainstorm, 🔧 Build, 📣 Promote, 🐛 Debug, 📚 Learn
+### 🏆 Achievement System
+- **Tiered Badges**: Bronze → Silver → Gold → Platinum → Diamond
+- **Categories**: 
+  - 🤝 Contribution (completing quests)
+  - 👑 Leadership (leading teams/quests)
+  - 💡 Creativity (innovative solutions)
+  - 🔥 Consistency (daily/weekly streaks)
+  - 🤜🤛 Collaboration (teamwork)
+  - 🎯 Milestones (XP/level achievements)
+  - ⭐ Special Events (seasonal achievements)
 
-### Achievement System
-Earn tiered badges for contributions:
-- **Bronze** → First steps (10 XP)
-- **Silver** → Growing skills (50 XP)
-- **Gold** → Mastery level (100 XP)
-- **Platinum** → Elite performer (250 XP)
-- **Diamond** → Legendary status (500 XP)
+### 🦥 Mascot Companion
+- **Customizable Mascots**: Choose from Sloth, Phoenix, Dragon, Unicorn, Robot, Cat, or Owl
+- **Evolution System**: Mascots level up and evolve as your team completes quests
+- **Moods & Emotions**: Happy, Excited, Focused, Tired, Celebrating, Thinking, Sleeping
+- **Unlockable Skins**: Seasonal skins like "Cyber Sloth" and "Pixel Phoenix"
+- **Accessories**: Customize with hats, glasses, and other items
+- **Interactive Phrases**: Context-aware motivational messages
 
-Categories include: Contributions, Leadership, Creativity, Consistency, Collaboration
+### 🗺️ Progress Visualization
+- **Journey Map**: Visual representation of team progress across sprints/semesters
+- **Sprint System**: Organize work into time-boxed sprints with goals
+- **XP Tracking**: Real-time experience point calculations with bonuses
+- **Level System**: Team and individual progression with level-up celebrations
+- **Skill Points**: Track individual strengths (Coding, Leadership, Design, etc.)
 
-### Mascot Companion
-- Customizable team mascot that evolves with progress
-- Seasonal skins (e.g., "Cyber Sloth", "Pixel Phoenix", "Code Dragon")
-- Mascot personality reflects team culture
-- Evolution stages based on total team XP
+### 📱 Team Feed
+- **Social Updates**: Share wins, achievements, and milestone completions
+- **Loot Drops**: Post helpful resources, tips, and team memes
+- **Reactions & Comments**: Engage with team posts
+- **Pinned Posts**: Highlight important announcements
+- **Activity Types**: Quest completions, level-ups, achievement unlocks, and more
 
-### Progress Map
-Visual journey showing:
-- Sprint/semester milestones
-- Completed quests path
-- Upcoming challenges
-- Team achievements timeline
+### 🔄 Developer-Friendly Features
+- **Git Integration**: Track GitHub branches and repositories
+- **Sync & Stash Protocols**: Built-in version control guidance
+- **Code Review Quests**: Turn PR reviews into XP-earning activities
 
-### Team Feed
-- Celebrate wins and completed quests
-- Share updates and announcements
-- Post "loot drops" (resources, tips, memes)
-- Quest completion notifications
-- Achievement unlocks
+### 🤖 AI Assistant Mode
+- **Quest Breakdown**: AI suggests how to split large tasks into manageable quests
+- **Onboarding Flows**: Automated new member introduction sequences
+- **Motivational Nudges**: Behavioral analysis for encouragement
+- **Progress Insights**: Team performance analytics and recommendations
 
-### Sync & Stash Protocols
-Built-in guidance for collaborative coding teams:
-- Git workflow best practices
-- Branch management strategies
-- Code review quest integration
-- Merge conflict resolution tips
-
-### AI Assistant Mode
-Smart suggestions for:
-- Quest breakdown from large tasks
-- Onboarding flow creation
-- Motivational nudges based on team behavior
-- Resource recommendations
-- Progress insights
-
----
-
-## 🎨 Branding & UI
-
-### Visual Elements
-- Mascot-driven interface with personality
-- Color-coded quest types for easy identification
-- Progress bars and XP counters
-- Achievement badge gallery
-- Animated quest completions
-
-### Seasonal Themes
-- Spring: Blooming Garden theme
-- Summer: Beach Adventure theme
-- Fall: Harvest Quest theme
-- Winter: Ice Kingdom theme
-- Special: Cyber/Retro themes
-
----
-
-## 🚀 Use Cases
-
-### Student Development Teams
-- Manage capstone projects with milestone quests
-- Track individual contributions
-- Onboard new team members with tutorial quests
-- Celebrate semester achievements
-
-### Remote Startups
-- Gamify sprint cycles and OKRs
-- Build team culture through shared achievements
-- Recognize consistent contributors
-- Visualize product roadmap progress
-
-### Hackathon Squads
-- Quick team formation with instant mascots
-- Track 24-48 hour progress
-- Coordinate parallel workstreams
-- Celebrate incremental wins
-
-### Clubs & Organizations
-- Interactive onboarding quests for new members
-- Leadership achievement tracking
-- Event planning and execution quests
-- Alumni mentorship badge system
-
----
-
-## 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
 QuestBoard/
-├── README.md                 # This file
-├── requirements.txt          # Python dependencies
-├── .gitignore               # Git ignore rules
-├── src/                     # Source code
-│   ├── models/              # Data models
-│   │   ├── quest.py
-│   │   ├── achievement.py
-│   │   ├── mascot.py
-│   │   └── team.py
-│   ├── services/            # Business logic
-│   │   ├── quest_service.py
-│   │   ├── achievement_service.py
-│   │   └── mascot_service.py
-│   └── utils/               # Utilities
-│       ├── xp_calculator.py
-│       └── ai_assistant.py
+├── questboard_app/           # Flutter cross-platform app
+│   ├── lib/
+│   │   ├── models/          # Data models (Quest, User, Team, Achievement, Mascot, etc.)
+│   │   ├── screens/         # UI screens
+│   │   ├── widgets/         # Reusable UI components
+│   │   ├── services/        # Business logic and data services
+│   │   ├── providers/       # State management (Riverpod)
+│   │   ├── utils/           # Utilities and helpers
+│   │   └── main.dart        # App entry point
+│   ├── assets/              # Images, animations, mascots
+│   └── pubspec.yaml         # Flutter dependencies
+├── src/                     # Python backend (optional)
 ├── config/                  # Configuration files
-│   ├── quest_types.json
-│   ├── achievements.json
-│   └── mascots.json
 ├── docs/                    # Documentation
-│   ├── getting-started.md
-│   ├── quest-guide.md
-│   └── api-reference.md
-└── examples/                # Example configurations
-    ├── startup_team.json
-    ├── student_project.json
-    └── hackathon_squad.json
+└── examples/                # Example team configurations
 ```
 
----
-
-## 🏁 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.8+
-- pip package manager
+- Flutter SDK (>=3.9.2)
+- Dart SDK (>=3.9.2)
+- Git
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/NolenM93/QuestBoard.git
-cd QuestBoard
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/NolenM93/QuestBoard.git
+   cd QuestBoard
+   ```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+2. **Navigate to Flutter app**
+   ```bash
+   cd questboard_app
+   ```
 
-3. Run the application:
-```bash
-python -m src.main
-```
+3. **Install dependencies**
+   ```bash
+   flutter pub get
+   ```
 
----
+4. **Generate Hive adapters** (for local storage)
+   ```bash
+   flutter pub run build_runner build --delete-conflicting-outputs
+   ```
 
-## 📖 Quick Start Guide
+5. **Run the app**
+   ```bash
+   # For web
+   flutter run -d chrome
+   
+   # For mobile (with device connected)
+   flutter run
+   
+   # For desktop
+   flutter run -d windows  # or macos, linux
+   ```
 
-### Creating Your First Quest
+## 📦 Dependencies
 
-```python
-from src.models.quest import Quest
-from src.models.team import Team
+### Core
+- `flutter_riverpod` - State management
+- `hive` & `hive_flutter` - Local database
+- `go_router` - Navigation
 
-# Initialize your team
-team = Team(name="Awesome Squad", mascot_type="Cyber Sloth")
+### UI & Animation
+- `animations` - Page transitions
+- `lottie` - Animation playback
+- `flutter_staggered_animations` - List animations
+- `flutter_svg` - SVG support
+- `fl_chart` - Charts and graphs
+- `percent_indicator` - Progress indicators
 
-# Create a quest
-quest = Quest(
-    title="Set up project repository",
-    description="Initialize Git repo and add README",
-    difficulty="Easy",
-    quest_type="Build",
-    xp_reward=25
-)
+### Networking
+- `http` - HTTP requests
+- `dio` - Advanced networking
 
-# Assign and complete
-quest.assign_to(team_member)
-quest.complete()
-```
+### Utilities
+- `uuid` - Unique ID generation
+- `intl` - Internationalization
 
-### Tracking Achievements
+## 🎨 Branding & Design
 
-```python
-from src.services.achievement_service import AchievementService
+### Color Palette
+- **Primary**: Purple (#6C5CE7)
+- **Secondary**: Cyan (#00D2D3)
+- **Quest Types**: Color-coded for each category
+- **Badge Tiers**: Bronze, Silver, Gold, Platinum, Diamond
 
-achievement_service = AchievementService()
-achievements = achievement_service.check_achievements(team)
-
-for achievement in achievements:
-    print(f"🏆 Unlocked: {achievement.name} - {achievement.tier}")
-```
-
----
+### Typography
+- Font Family: Poppins
+- Material Design 3 (Material You)
 
 ## 🤝 Contributing
 
-We welcome contributions! Whether it's:
-- Adding new quest types
-- Creating mascot designs
-- Improving AI suggestions
-- Writing documentation
-- Fixing bugs
+We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
-Please feel free to open issues and pull requests.
+### Development Workflow
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
----
+## 📝 Documentation
 
-## 📝 License
+- [Getting Started Guide](./docs/getting-started.md)
+- [Quest Guide](./docs/quest-guide.md)
+- [API Reference](./docs/api-reference.md)
 
-This project is open source and available under the MIT License.
-
----
-
-## 🎯 Roadmap
+## 🛣️ Roadmap
 
 - [x] Core data models
-- [x] Quest creation system
-- [x] Achievement tracking
-- [x] Mascot system
-- [ ] Web UI interface
-- [ ] Mobile app (iOS/Android)
+- [x] Project structure setup
+- [ ] Quest creation UI
+- [ ] Achievement system implementation
+- [ ] Mascot companion feature
+- [ ] Team feed
+- [ ] Progress visualization
+- [ ] AI assistant integration
 - [ ] Real-time collaboration
-- [ ] Third-party integrations (Slack, Discord, Jira)
-- [ ] Advanced analytics dashboard
-- [ ] Machine learning for personalized suggestions
+- [ ] Cloud sync
+- [ ] Mobile app release
+- [ ] Web app release
+- [ ] Desktop app release
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Inspired by gamification in education and productivity tools
+- Built with Flutter for true cross-platform development
+- Community-driven development approach
+
+## 📧 Contact
+
+- **Project Lead**: NolenM93
+- **Repository**: [github.com/NolenM93/QuestBoard](https://github.com/NolenM93/QuestBoard)
+- **Issues**: [Submit an issue](https://github.com/NolenM93/QuestBoard/issues)
 
 ---
 
-## 💬 Community & Support
+**Made with ❤️ for teams that want to level up their productivity!**
 
-- **Discord**: Join our community server
-- **Documentation**: Full docs at [questboard.dev](https://questboard.dev)
-- **Issues**: Report bugs on GitHub
-- **Discussions**: Share ideas in GitHub Discussions
-
----
-
-*Built with ❤️ for teams who believe work should be fun*
+🎮 Turn your tasks into quests. 🏆 Celebrate achievements. 🦥 Grow with your mascot.

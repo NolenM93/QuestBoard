@@ -1,207 +1,230 @@
-# Getting Started with QuestBoard
+# 🚀 Getting Started with QuestBoard
 
-Welcome to QuestBoard! This guide will help you set up and start using QuestBoard for your team.
+Welcome to QuestBoard! This guide will help you set up the project and start your gamified team tracking adventure.
 
-## Installation
+## 📋 Prerequisites
 
-### Prerequisites
-- Python 3.8 or higher
-- pip package manager
-- Git
+Before you begin, ensure you have the following installed:
 
-### Setup Steps
+1. **Flutter SDK** (version 3.9.2 or higher)
+   - Download from: https://flutter.dev/docs/get-started/install
+   - Verify installation: `flutter --version`
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/NolenM93/QuestBoard.git
-   cd QuestBoard
-   ```
+2. **Git**
+   - Download from: https://git-scm.com/downloads
+   - Verify installation: `git --version`
 
-2. **Create a virtual environment (recommended)**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+3. **An IDE** (choose one):
+   - VS Code with Flutter extension (recommended)
+   - Android Studio with Flutter plugin
+   - IntelliJ IDEA with Flutter plugin
 
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🔧 Initial Setup
 
-4. **Run the demo**
-   ```bash
-   python -m src.main
-   ```
+### 1. Configure Git (First Time Only)
 
-## Quick Start
+If you haven't configured Git yet, run these commands:
 
-### Creating Your First Team
-
-```python
-from src.models.team import Team, TeamMember
-from src.models.mascot import MascotType
-
-# Create a team with a mascot
-team = Team.create(
-    name="My Awesome Team",
-    mascot_name="Buddy",
-    mascot_type=MascotType.CYBER_SLOTH,
-    description="Building amazing things together"
-)
-
-# Add team members
-team.add_member(TeamMember(
-    username="john",
-    display_name="John Doe",
-    role="Developer"
-))
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
 ```
 
-### Creating Your First Quest
+### 2. Clone or Initialize Repository
 
-```python
-from src.models.quest import QuestType, QuestDifficulty
-from src.services.quest_service import QuestService
-
-# Create a quest
-quest = QuestService.create_quest(
-    title="Set up development environment",
-    description="Install all necessary tools and dependencies",
-    difficulty=QuestDifficulty.EASY,
-    quest_type=QuestType.BUILD,
-    tags=["setup", "onboarding"]
-)
-
-# Add quest to team
-team.add_quest(quest)
+If you're starting fresh (already done):
+```bash
+cd c:\Users\nolen\QuestBoard
+git init
 ```
 
-### Assigning and Completing Quests
+### 3. Install Flutter Dependencies
 
-```python
-# Assign quest to a member
-member = team.get_member("john")
-QuestService.assign_quest(quest, member)
+Navigate to the Flutter app directory and install dependencies:
 
-# Start working on the quest
-quest.start()
-
-# Complete the quest
-xp_earned = QuestService.complete_quest(quest, team)
-print(f"Earned {xp_earned} XP!")
+```bash
+cd questboard_app
+flutter pub get
 ```
 
-### Tracking Achievements
+This will download all required packages including:
+- Riverpod (state management)
+- Hive (local database)
+- Lottie (animations)
+- And more...
 
-```python
-from src.services.achievement_service import AchievementService
+### 4. Generate Hive Adapters
 
-# Initialize team achievements
-AchievementService.initialize_team_achievements(team)
+Hive needs type adapters for the data models. Generate them with:
 
-# Check for new achievements after completing quests
-new_achievements = AchievementService.check_achievements(team, member)
-
-for achievement in new_achievements:
-    print(f"🏆 Unlocked: {achievement.name}")
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
 ```
 
-## Understanding Core Concepts
+This creates `.g.dart` files for all your models.
+
+### 5. Verify Flutter Setup
+
+Check that Flutter is properly configured:
+
+```bash
+flutter doctor
+```
+
+Fix any issues reported (Android/iOS SDK, etc.).
+
+## 🏃‍♂️ Running the App
+
+### Web (Easiest for Development)
+
+```bash
+flutter run -d chrome
+```
+
+Or in VS Code:
+1. Press `F5`
+2. Select "Chrome" as the device
+
+### Windows Desktop
+
+```bash
+flutter run -d windows
+```
+
+### Android
+
+1. Connect an Android device or start an emulator
+2. Run: `flutter run`
+
+### iOS (Mac only)
+
+1. Connect an iOS device or start a simulator
+2. Run: `flutter run`
+
+## 📁 Project Structure Overview
+
+```
+questboard_app/
+├── lib/
+│   ├── main.dart              # App entry point
+│   ├── models/                # Data models
+│   │   ├── user.dart         # User model with XP, level, achievements
+│   │   ├── quest.dart        # Quest model with types, difficulty, status
+│   │   ├── achievement.dart  # Achievement & badge system
+│   │   ├── team.dart         # Team & sprint management
+│   │   ├── mascot.dart       # Mascot companion system
+│   │   └── feed_post.dart    # Social feed posts
+│   ├── screens/               # UI screens (to be created)
+│   ├── widgets/               # Reusable components (to be created)
+│   ├── services/              # Business logic (to be created)
+│   ├── providers/             # State management (to be created)
+│   └── utils/                 # Utilities
+│       ├── constants.dart    # Colors, text styles, spacing
+│       └── xp_calculator.dart # XP & level calculations
+├── assets/                    # Images, animations, icons
+└── pubspec.yaml              # Dependencies
+```
+
+## 🎮 Core Concepts
+
+### XP & Leveling System
+
+- **User Levels**: Based on total XP (100 XP per level)
+- **Quest XP**: Varies by difficulty
+  - Easy: 15 XP
+  - Medium: 35 XP
+  - Hard: 75 XP
+  - Epic: 150 XP
+- **Bonuses**: Early completion, streaks, team work
 
 ### Quest Types
 
-QuestBoard supports 7 quest types:
-
-- 🧠 **Brainstorm**: Ideation and planning
-- 🔧 **Build**: Implementation and construction
-- 📣 **Promote**: Marketing and communication
-- 🐛 **Debug**: Bug fixing and troubleshooting
-- 📚 **Learn**: Research and skill development
-- 👀 **Review**: Code review and QA
-- 📝 **Documentation**: Writing docs and guides
-
-### Difficulty Levels
-
-- **Easy** (25 XP): Quick tasks, 1-2 hours
-- **Medium** (50 XP): Moderate tasks, half-day
-- **Hard** (100 XP): Complex tasks, 1-2 days
-- **Epic** (200 XP): Major undertakings, 3+ days
+Each quest type has a unique color and focus:
+- 🧠 **Brainstorm** (Orange): Creative thinking, planning
+- 🔧 **Build** (Teal): Development, coding
+- 📣 **Promote** (Blue): Marketing, communication
+- 🔬 **Research** (Green): Analysis, documentation
+- 🧪 **Test** (Yellow): QA, testing
+- 👀 **Review** (Purple): Code review, feedback
+- 📚 **Learn** (Pink): Learning new skills
 
 ### Achievement Tiers
 
-- 🥉 **Bronze**: First steps (10 XP)
-- 🥈 **Silver**: Growing skills (50 XP)
-- 🥇 **Gold**: Mastery (100 XP)
-- 💎 **Platinum**: Elite (250 XP)
-- 💠 **Diamond**: Legendary (500 XP)
+- 🥉 **Bronze**: 50 XP
+- 🥈 **Silver**: 100 XP
+- 🥇 **Gold**: 200 XP
+- 💎 **Platinum**: 400 XP
+- 💠 **Diamond**: 800 XP
 
-### Mascot Evolution
+## 🔨 Development Workflow
 
-Your team mascot evolves as you earn XP:
+### 1. Create a Feature Branch
 
-1. **Egg** (0 XP): Just starting
-2. **Hatchling** (100 XP): First steps
-3. **Juvenile** (500 XP): Growing strong
-4. **Adult** (1,000 XP): Fully developed
-5. **Elder** (2,000 XP): Wise and experienced
-6. **Legendary** (5,000 XP): Ultimate form
-
-## Using the AI Assistant
-
-```python
-from src.utils.ai_assistant import AIAssistant
-
-# Get quest breakdown suggestions
-breakdown = AIAssistant.suggest_quest_breakdown(
-    "Implement user authentication",
-    "Build secure login system"
-)
-
-# Get motivational message
-message = AIAssistant.generate_motivational_message(team)
-
-# Analyze team health
-health = AIAssistant.analyze_team_health(team)
-print(f"Health Score: {health['health_score']}/100")
+```bash
+git checkout -b feature/your-feature-name
 ```
 
-## Best Practices
+### 2. Make Your Changes
 
-### 1. Break Down Large Tasks
-- Use the AI assistant to break epic quests into smaller ones
-- Each quest should be completable within a reasonable timeframe
-- Smaller quests = more frequent wins and motivation
+Edit files in `lib/`, `assets/`, etc.
 
-### 2. Regular Check-ins
-- Review team progress weekly
-- Celebrate completed quests and achievements
-- Adjust quest difficulty based on team capacity
+### 3. Run the App
 
-### 3. Balance Quest Types
-- Mix different quest types for variety
-- Include learning and documentation quests
-- Don't neglect review and debugging tasks
+```bash
+flutter run
+```
 
-### 4. Engage the Whole Team
-- Ensure everyone has assigned quests
-- Use the leaderboard to recognize top contributors
-- Create collaborative quests for team bonding
+### 4. Hot Reload
 
-### 5. Customize Your Experience
-- Choose a mascot that represents your team
-- Apply seasonal skins to keep things fresh
-- Create custom achievements for team-specific goals
+Press `r` in the terminal or save files to see changes instantly!
 
-## Next Steps
+### 5. Commit Your Changes
 
-- Read the [Quest Guide](quest-guide.md) for detailed quest management
-- Check out the [Example Configurations](../examples/) for team templates
-- Explore the codebase to extend QuestBoard for your needs
+```bash
+git add .
+git commit -m "Description of your changes"
+```
 
-## Getting Help
+## 🐛 Troubleshooting
 
-- **Issues**: Report bugs on GitHub Issues
-- **Discussions**: Ask questions in GitHub Discussions
-- **Documentation**: Full API reference in [api-reference.md](api-reference.md)
+### "Target of URI doesn't exist" Errors
 
-Happy questing! 🎮✨
+Run `flutter pub get` to install dependencies.
+
+### Hive Adapter Errors
+
+Run `flutter pub run build_runner build --delete-conflicting-outputs`
+
+### Flutter Doctor Issues
+
+Run `flutter doctor` and follow the suggested fixes.
+
+### Hot Reload Not Working
+
+Try hot restart: press `R` (capital R) in the terminal.
+
+## 📚 Next Steps
+
+1. **Explore the Models**: Check out `lib/models/` to understand the data structure
+2. **Review Constants**: See `lib/utils/constants.dart` for colors and styles
+3. **Build Your First Screen**: Create a quest creation screen in `lib/screens/`
+4. **Add State Management**: Use Riverpod providers in `lib/providers/`
+5. **Test the App**: Run on multiple platforms
+
+## 🤝 Getting Help
+
+- **Documentation**: Check `docs/` folder
+- **Issues**: Report bugs on GitHub
+- **Discussions**: Join the project discussions
+
+## 🎉 Ready to Build!
+
+You're all set! Start by running:
+
+```bash
+cd questboard_app
+flutter pub get
+flutter run -d chrome
+```
+
+Happy questing! 🚀

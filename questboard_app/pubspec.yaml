@@ -1,0 +1,57 @@
+name: questboard_app
+description: "QuestBoard - Gamified Team Progress Tracker"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  provider: ^6.1.2
+  riverpod: ^2.5.1
+  flutter_riverpod: ^2.5.1
+  
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # Networking
+  http: ^1.2.0
+  dio: ^5.4.1
+  
+  # UI Enhancements
+  animations: ^2.0.11
+  lottie: ^3.1.0
+  flutter_staggered_animations: ^1.1.1
+  flutter_svg: ^2.0.10+1
+  
+  # Navigation
+  go_router: ^14.1.4
+  
+  # Utils
+  uuid: ^4.4.0
+  intl: ^0.19.0
+  
+  # Charts and Progress
+  fl_chart: ^0.66.2
+  percent_indicator: ^4.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.9
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/animations/
+    - assets/mascots/
+    - assets/icons/
