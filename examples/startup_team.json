@@ -1,0 +1,95 @@
+{
+  "team": {
+    "name": "Innovate Labs",
+    "description": "A scrappy startup building the next big thing",
+    "mascot": {
+      "name": "Sparky",
+      "type": "Pixel Phoenix",
+      "skin": "Cyber Neon"
+    }
+  },
+  "members": [
+    {
+      "username": "alice_cto",
+      "display_name": "Alice Chen",
+      "role": "CTO",
+      "avatar": "👩‍💻"
+    },
+    {
+      "username": "bob_dev",
+      "display_name": "Bob Smith",
+      "role": "Senior Developer",
+      "avatar": "👨‍💻"
+    },
+    {
+      "username": "carol_design",
+      "display_name": "Carol Wang",
+      "role": "UI/UX Designer",
+      "avatar": "👩‍🎨"
+    },
+    {
+      "username": "dave_product",
+      "display_name": "Dave Johnson",
+      "role": "Product Manager",
+      "avatar": "📊"
+    }
+  ],
+  "sample_quests": [
+    {
+      "title": "MVP Feature Set Planning",
+      "description": "Define and prioritize features for MVP launch",
+      "difficulty": "Hard",
+      "quest_type": "Brainstorm",
+      "assigned_to": "dave_product",
+      "tags": ["planning", "mvp", "strategy"]
+    },
+    {
+      "title": "User Authentication System",
+      "description": "Implement secure OAuth2 authentication flow",
+      "difficulty": "Hard",
+      "quest_type": "Build",
+      "assigned_to": "bob_dev",
+      "tags": ["security", "backend", "authentication"]
+    },
+    {
+      "title": "Landing Page Design",
+      "description": "Create compelling landing page with clear value proposition",
+      "difficulty": "Medium",
+      "quest_type": "Build",
+      "assigned_to": "carol_design",
+      "tags": ["design", "marketing", "ui"]
+    },
+    {
+      "title": "API Documentation",
+      "description": "Write comprehensive API documentation for developers",
+      "difficulty": "Medium",
+      "quest_type": "Documentation",
+      "assigned_to": "alice_cto",
+      "tags": ["documentation", "api", "developer-experience"]
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Optimize database queries and reduce load times",
+      "difficulty": "Epic",
+      "quest_type": "Build",
+      "assigned_to": "bob_dev",
+      "tags": ["performance", "optimization", "backend"]
+    },
+    {
+      "title": "User Onboarding Flow",
+      "description": "Design intuitive onboarding experience for new users",
+      "difficulty": "Hard",
+      "quest_type": "Build",
+      "assigned_to": "carol_design",
+      "tags": ["ux", "onboarding", "user-experience"]
+    },
+    {
+      "title": "Beta User Recruitment",
+      "description": "Reach out to potential beta testers",
+      "difficulty": "Easy",
+      "quest_type": "Promote",
+      "assigned_to": "dave_product",
+      "tags": ["marketing", "growth", "beta"]
+    }
+  ]
+}

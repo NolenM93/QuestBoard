@@ -1,0 +1,20 @@
+# Core dependencies
+python-dateutil>=2.8.2
+typing-extensions>=4.0.0
+
+# Data handling
+pydantic>=2.0.0
+
+# Optional: For AI assistant features
+# openai>=1.0.0
+
+# Optional: For database support
+# sqlalchemy>=2.0.0
+
+# Optional: For API/web interface
+# fastapi>=0.100.0
+# uvicorn>=0.23.0
+
+# Development dependencies
+pytest>=7.4.0
+pytest-cov>=4.1.0

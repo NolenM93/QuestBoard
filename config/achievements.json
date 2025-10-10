@@ -1,0 +1,200 @@
+{
+  "achievement_tiers": [
+    {
+      "name": "Bronze",
+      "xp_threshold": 10,
+      "color": "#CD7F32",
+      "description": "First steps on your journey"
+    },
+    {
+      "name": "Silver",
+      "xp_threshold": 50,
+      "color": "#C0C0C0",
+      "description": "Growing skills and experience"
+    },
+    {
+      "name": "Gold",
+      "xp_threshold": 100,
+      "color": "#FFD700",
+      "description": "Mastery level achievement"
+    },
+    {
+      "name": "Platinum",
+      "xp_threshold": 250,
+      "color": "#E5E4E2",
+      "description": "Elite performer status"
+    },
+    {
+      "name": "Diamond",
+      "xp_threshold": 500,
+      "color": "#B9F2FF",
+      "description": "Legendary achievement"
+    }
+  ],
+  "achievement_categories": [
+    {
+      "name": "Contributions",
+      "icon": "🎯",
+      "description": "Achievements for completing quests and contributing to the team",
+      "color": "#3498DB"
+    },
+    {
+      "name": "Leadership",
+      "icon": "👑",
+      "description": "Achievements for leading and organizing the team",
+      "color": "#F39C12"
+    },
+    {
+      "name": "Creativity",
+      "icon": "🎨",
+      "description": "Achievements for innovative and creative solutions",
+      "color": "#9B59B6"
+    },
+    {
+      "name": "Consistency",
+      "icon": "🔥",
+      "description": "Achievements for maintaining regular activity",
+      "color": "#E67E22"
+    },
+    {
+      "name": "Collaboration",
+      "icon": "🤝",
+      "description": "Achievements for teamwork and helping others",
+      "color": "#1ABC9C"
+    },
+    {
+      "name": "Speed",
+      "icon": "⚡",
+      "description": "Achievements for completing quests quickly",
+      "color": "#E74C3C"
+    },
+    {
+      "name": "Quality",
+      "icon": "⭐",
+      "description": "Achievements for high-quality work",
+      "color": "#2ECC71"
+    }
+  ],
+  "default_achievements": [
+    {
+      "name": "First Steps",
+      "description": "Complete your first quest",
+      "tier": "Bronze",
+      "category": "Contributions",
+      "xp_requirement": 10,
+      "icon": "🎯"
+    },
+    {
+      "name": "Quest Warrior",
+      "description": "Complete 10 quests",
+      "tier": "Silver",
+      "category": "Contributions",
+      "xp_requirement": 50,
+      "icon": "⚔️"
+    },
+    {
+      "name": "Quest Master",
+      "description": "Complete 50 quests",
+      "tier": "Gold",
+      "category": "Contributions",
+      "xp_requirement": 100,
+      "icon": "👑"
+    },
+    {
+      "name": "Legend",
+      "description": "Complete 100 quests",
+      "tier": "Platinum",
+      "category": "Contributions",
+      "xp_requirement": 250,
+      "icon": "🌟"
+    },
+    {
+      "name": "Mythical",
+      "description": "Complete 250 quests",
+      "tier": "Diamond",
+      "category": "Contributions",
+      "xp_requirement": 500,
+      "icon": "💎"
+    },
+    {
+      "name": "Team Player",
+      "description": "Create your first quest",
+      "tier": "Bronze",
+      "category": "Leadership",
+      "xp_requirement": 10,
+      "icon": "🤝"
+    },
+    {
+      "name": "Quest Giver",
+      "description": "Create 10 quests for the team",
+      "tier": "Silver",
+      "category": "Leadership",
+      "xp_requirement": 50,
+      "icon": "📋"
+    },
+    {
+      "name": "Visionary",
+      "description": "Create 25 quests",
+      "tier": "Gold",
+      "category": "Leadership",
+      "xp_requirement": 100,
+      "icon": "🔮"
+    },
+    {
+      "name": "Steady Pace",
+      "description": "Complete quests for 3 days in a row",
+      "tier": "Bronze",
+      "category": "Consistency",
+      "xp_requirement": 10,
+      "icon": "📅"
+    },
+    {
+      "name": "Dedicated",
+      "description": "Complete quests for 7 days in a row",
+      "tier": "Silver",
+      "category": "Consistency",
+      "xp_requirement": 50,
+      "icon": "🔥"
+    },
+    {
+      "name": "Unstoppable",
+      "description": "Complete quests for 30 days in a row",
+      "tier": "Gold",
+      "category": "Consistency",
+      "xp_requirement": 100,
+      "icon": "⚡"
+    },
+    {
+      "name": "Quick Draw",
+      "description": "Complete a quest within 1 hour",
+      "tier": "Bronze",
+      "category": "Speed",
+      "xp_requirement": 10,
+      "icon": "⏱️"
+    },
+    {
+      "name": "Speed Demon",
+      "description": "Complete 5 quests in one day",
+      "tier": "Silver",
+      "category": "Speed",
+      "xp_requirement": 50,
+      "icon": "🚀"
+    },
+    {
+      "name": "Helper",
+      "description": "Assist a teammate on a quest",
+      "tier": "Bronze",
+      "category": "Collaboration",
+      "xp_requirement": 10,
+      "icon": "🤗"
+    },
+    {
+      "name": "Team Spirit",
+      "description": "Collaborate on 10 quests",
+      "tier": "Silver",
+      "category": "Collaboration",
+      "xp_requirement": 50,
+      "icon": "💪"
+    }
+  ]
+}
