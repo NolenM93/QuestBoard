@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:questboard_app/utils/constants.dart';
+import 'package:questboard_app/screens/login_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -82,7 +83,7 @@ class QuestBoardApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: const SplashScreen(),
+      home: const LoginScreen(),
     );
   }
 }
