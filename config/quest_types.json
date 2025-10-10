@@ -1,0 +1,107 @@
+{
+  "quest_types": [
+    {
+      "name": "Brainstorm",
+      "icon": "🧠",
+      "description": "Ideation, planning, and creative thinking",
+      "color": "#9B59B6",
+      "examples": [
+        "Design system architecture",
+        "Plan sprint goals",
+        "Brainstorm feature ideas"
+      ]
+    },
+    {
+      "name": "Build",
+      "icon": "🔧",
+      "description": "Implementation and construction tasks",
+      "color": "#E67E22",
+      "examples": [
+        "Implement user authentication",
+        "Build API endpoints",
+        "Create database schema"
+      ]
+    },
+    {
+      "name": "Promote",
+      "icon": "📣",
+      "description": "Marketing, communication, and outreach",
+      "color": "#3498DB",
+      "examples": [
+        "Write blog post",
+        "Create social media content",
+        "Present to stakeholders"
+      ]
+    },
+    {
+      "name": "Debug",
+      "icon": "🐛",
+      "description": "Bug fixing and troubleshooting",
+      "color": "#E74C3C",
+      "examples": [
+        "Fix login issue",
+        "Resolve performance bottleneck",
+        "Debug API error"
+      ]
+    },
+    {
+      "name": "Learn",
+      "icon": "📚",
+      "description": "Research, learning, and skill development",
+      "color": "#1ABC9C",
+      "examples": [
+        "Study new framework",
+        "Research best practices",
+        "Complete online course"
+      ]
+    },
+    {
+      "name": "Review",
+      "icon": "👀",
+      "description": "Code review and quality assurance",
+      "color": "#F39C12",
+      "examples": [
+        "Review pull request",
+        "Test new feature",
+        "Conduct code audit"
+      ]
+    },
+    {
+      "name": "Documentation",
+      "icon": "📝",
+      "description": "Writing documentation and guides",
+      "color": "#95A5A6",
+      "examples": [
+        "Write API documentation",
+        "Create user guide",
+        "Update README"
+      ]
+    }
+  ],
+  "difficulty_levels": [
+    {
+      "name": "Easy",
+      "base_xp": 25,
+      "color": "#2ECC71",
+      "description": "Simple tasks that can be completed quickly"
+    },
+    {
+      "name": "Medium",
+      "base_xp": 50,
+      "color": "#F39C12",
+      "description": "Moderate complexity requiring some time and effort"
+    },
+    {
+      "name": "Hard",
+      "base_xp": 100,
+      "color": "#E74C3C",
+      "description": "Complex tasks requiring significant effort"
+    },
+    {
+      "name": "Epic",
+      "base_xp": 200,
+      "color": "#9B59B6",
+      "description": "Major undertakings with high impact"
+    }
+  ]
+}

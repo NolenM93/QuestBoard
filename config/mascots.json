@@ -1,0 +1,210 @@
+{
+  "mascot_types": [
+    {
+      "name": "Cyber Sloth",
+      "emoji": "🦥",
+      "description": "A laid-back but efficient coding companion",
+      "personality_traits": ["Patient", "Strategic", "Wise"],
+      "special_ability": "Optimizes workflow for maximum efficiency with minimal effort"
+    },
+    {
+      "name": "Pixel Phoenix",
+      "emoji": "🐦",
+      "description": "Rises from the ashes of bugs and errors",
+      "personality_traits": ["Resilient", "Creative", "Energetic"],
+      "special_ability": "Transforms failures into learning opportunities"
+    },
+    {
+      "name": "Code Dragon",
+      "emoji": "🐉",
+      "description": "A fierce guardian of clean code and best practices",
+      "personality_traits": ["Brave", "Determined", "Protective"],
+      "special_ability": "Breathes fire into complex problems, making them manageable"
+    },
+    {
+      "name": "Ninja Turtle",
+      "emoji": "🐢",
+      "description": "Slow and steady wins the race",
+      "personality_traits": ["Patient", "Disciplined", "Focused"],
+      "special_ability": "Master of consistent, steady progress"
+    },
+    {
+      "name": "Space Cat",
+      "emoji": "🐱",
+      "description": "Explores the unknown territories of your codebase",
+      "personality_traits": ["Curious", "Adventurous", "Playful"],
+      "special_ability": "Discovers hidden bugs and opportunities"
+    },
+    {
+      "name": "Retro Robot",
+      "emoji": "🤖",
+      "description": "A nostalgic companion with modern capabilities",
+      "personality_traits": ["Logical", "Supportive", "Systematic"],
+      "special_ability": "Automates repetitive tasks with 8-bit charm"
+    },
+    {
+      "name": "Quantum Quokka",
+      "emoji": "🦘",
+      "description": "Exists in multiple states of productivity simultaneously",
+      "personality_traits": ["Optimistic", "Energetic", "Adaptable"],
+      "special_ability": "Quantum leaps through complex challenges"
+    }
+  ],
+  "evolution_stages": [
+    {
+      "name": "Egg",
+      "xp_required": 0,
+      "description": "Just beginning the journey"
+    },
+    {
+      "name": "Hatchling",
+      "xp_required": 100,
+      "description": "Taking first steps in the quest world"
+    },
+    {
+      "name": "Juvenile",
+      "xp_required": 500,
+      "description": "Growing stronger with each quest"
+    },
+    {
+      "name": "Adult",
+      "xp_required": 1000,
+      "description": "A fully developed companion"
+    },
+    {
+      "name": "Elder",
+      "xp_required": 2000,
+      "description": "Wise and experienced guide"
+    },
+    {
+      "name": "Legendary",
+      "xp_required": 5000,
+      "description": "Ultimate form - a true legend"
+    }
+  ],
+  "seasonal_skins": {
+    "spring": [
+      {
+        "name": "Blooming Garden",
+        "description": "Surrounded by flowers and new growth",
+        "available_from": "March 20",
+        "available_to": "June 20"
+      },
+      {
+        "name": "Cherry Blossom",
+        "description": "Adorned with beautiful sakura petals",
+        "available_from": "March 20",
+        "available_to": "June 20"
+      },
+      {
+        "name": "Rainbow",
+        "description": "Colorful and vibrant spring energy",
+        "available_from": "March 20",
+        "available_to": "June 20"
+      }
+    ],
+    "summer": [
+      {
+        "name": "Beach Party",
+        "description": "Ready for sun, sand, and code",
+        "available_from": "June 21",
+        "available_to": "September 21"
+      },
+      {
+        "name": "Tropical",
+        "description": "Tropical vibes and palm trees",
+        "available_from": "June 21",
+        "available_to": "September 21"
+      },
+      {
+        "name": "Sunset",
+        "description": "Warm golden hour glow",
+        "available_from": "June 21",
+        "available_to": "September 21"
+      }
+    ],
+    "fall": [
+      {
+        "name": "Harvest",
+        "description": "Reaping the rewards of hard work",
+        "available_from": "September 22",
+        "available_to": "December 20"
+      },
+      {
+        "name": "Autumn Leaves",
+        "description": "Surrounded by colorful falling leaves",
+        "available_from": "September 22",
+        "available_to": "December 20"
+      },
+      {
+        "name": "Pumpkin Spice",
+        "description": "Cozy fall aesthetic",
+        "available_from": "September 22",
+        "available_to": "December 20"
+      }
+    ],
+    "winter": [
+      {
+        "name": "Ice Kingdom",
+        "description": "Crystalline and magical",
+        "available_from": "December 21",
+        "available_to": "March 19"
+      },
+      {
+        "name": "Snowflake",
+        "description": "Unique and beautiful like a snowflake",
+        "available_from": "December 21",
+        "available_to": "March 19"
+      },
+      {
+        "name": "Northern Lights",
+        "description": "Aurora borealis glow",
+        "available_from": "December 21",
+        "available_to": "March 19"
+      }
+    ],
+    "special": [
+      {
+        "name": "Cyber Neon",
+        "description": "Futuristic cyberpunk aesthetics",
+        "unlock_requirement": "Reach 1000 team XP"
+      },
+      {
+        "name": "Retro 8-bit",
+        "description": "Classic pixelated charm",
+        "unlock_requirement": "Complete 50 quests"
+      },
+      {
+        "name": "Holographic",
+        "description": "Shimmering rainbow effect",
+        "unlock_requirement": "Unlock all tier achievements"
+      },
+      {
+        "name": "Galaxy",
+        "description": "Cosmic space theme",
+        "unlock_requirement": "Mascot reaches Legendary stage"
+      }
+    ]
+  },
+  "personality_traits": [
+    "Curious",
+    "Brave",
+    "Wise",
+    "Playful",
+    "Determined",
+    "Creative",
+    "Strategic",
+    "Supportive",
+    "Energetic",
+    "Patient",
+    "Logical",
+    "Optimistic",
+    "Adventurous",
+    "Disciplined",
+    "Focused",
+    "Resilient",
+    "Protective",
+    "Adaptable",
+    "Systematic"
+  ]
+}

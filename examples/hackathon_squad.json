@@ -1,0 +1,142 @@
+{
+  "team": {
+    "name": "Midnight Coders",
+    "description": "Racing against time to build something amazing in 48 hours",
+    "mascot": {
+      "name": "Lightning",
+      "type": "Space Cat",
+      "skin": "Cyber Neon"
+    }
+  },
+  "members": [
+    {
+      "username": "jack_fullstack",
+      "display_name": "Jack Martinez",
+      "role": "Full-Stack Developer",
+      "avatar": "⚡"
+    },
+    {
+      "username": "kate_designer",
+      "display_name": "Kate Brown",
+      "role": "Designer",
+      "avatar": "🎨"
+    },
+    {
+      "username": "leo_backend",
+      "display_name": "Leo Singh",
+      "role": "Backend Developer",
+      "avatar": "⚙️"
+    }
+  ],
+  "sample_quests": [
+    {
+      "title": "Ideation Session",
+      "description": "Brainstorm and finalize hackathon project idea",
+      "difficulty": "Easy",
+      "quest_type": "Brainstorm",
+      "assigned_to": "jack_fullstack",
+      "tags": ["ideation", "planning", "hackathon"]
+    },
+    {
+      "title": "Quick Design System",
+      "description": "Create minimal design system and color palette",
+      "difficulty": "Easy",
+      "quest_type": "Build",
+      "assigned_to": "kate_designer",
+      "tags": ["design", "ui", "speed"]
+    },
+    {
+      "title": "Project Setup",
+      "description": "Initialize repo, set up dev environment",
+      "difficulty": "Easy",
+      "quest_type": "Build",
+      "assigned_to": "leo_backend",
+      "tags": ["setup", "infrastructure", "devops"]
+    },
+    {
+      "title": "Core Feature Implementation",
+      "description": "Build the main feature that solves the problem",
+      "difficulty": "Epic",
+      "quest_type": "Build",
+      "assigned_to": "jack_fullstack",
+      "tags": ["core", "feature", "mvp"]
+    },
+    {
+      "title": "API Endpoints",
+      "description": "Create RESTful API endpoints",
+      "difficulty": "Hard",
+      "quest_type": "Build",
+      "assigned_to": "leo_backend",
+      "tags": ["api", "backend", "rest"]
+    },
+    {
+      "title": "Landing Page",
+      "description": "Design and build compelling landing page",
+      "difficulty": "Medium",
+      "quest_type": "Build",
+      "assigned_to": "kate_designer",
+      "tags": ["frontend", "design", "landing"]
+    },
+    {
+      "title": "Integration & Testing",
+      "description": "Connect frontend with backend and test",
+      "difficulty": "Hard",
+      "quest_type": "Build",
+      "assigned_to": "jack_fullstack",
+      "tags": ["integration", "testing", "debugging"]
+    },
+    {
+      "title": "Bug Squashing",
+      "description": "Fix critical bugs before demo",
+      "difficulty": "Medium",
+      "quest_type": "Debug",
+      "assigned_to": "leo_backend",
+      "tags": ["bugs", "debugging", "urgent"]
+    },
+    {
+      "title": "Demo Video",
+      "description": "Record demo video showcasing the project",
+      "difficulty": "Medium",
+      "quest_type": "Promote",
+      "assigned_to": "kate_designer",
+      "tags": ["demo", "video", "presentation"]
+    },
+    {
+      "title": "Pitch Deck",
+      "description": "Create presentation slides for judging",
+      "difficulty": "Easy",
+      "quest_type": "Promote",
+      "assigned_to": "jack_fullstack",
+      "tags": ["presentation", "pitch", "slides"]
+    },
+    {
+      "title": "README Documentation",
+      "description": "Write clear README with setup instructions",
+      "difficulty": "Easy",
+      "quest_type": "Documentation",
+      "assigned_to": "leo_backend",
+      "tags": ["documentation", "readme", "instructions"]
+    },
+    {
+      "title": "Deploy to Production",
+      "description": "Deploy project to cloud hosting",
+      "difficulty": "Medium",
+      "quest_type": "Build",
+      "assigned_to": "leo_backend",
+      "tags": ["deployment", "devops", "production"]
+    },
+    {
+      "title": "Final Presentation",
+      "description": "Present project to judges",
+      "difficulty": "Medium",
+      "quest_type": "Promote",
+      "assigned_to": "jack_fullstack",
+      "tags": ["presentation", "demo", "judging"]
+    }
+  ],
+  "notes": {
+    "timeline": "48-hour hackathon sprint",
+    "goal": "Build working prototype and win prizes",
+    "strategy": "Focus on core features, rapid iteration, impressive demo"
+  }
+}
