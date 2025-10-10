@@ -58,7 +58,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# Note: Python lib/ is in QuestBoard/ subfolder, not questboard_app/
+QuestBoard/lib/
 lib64/
 parts/
 sdist/
