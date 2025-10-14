@@ -1,4 +1,5 @@
 # QuestBoard Setup Script for Windows PowerShell
+# Updated and cleaned
 
 Write-Host "🎮 QuestBoard Setup Script" -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
@@ -7,7 +8,7 @@ Write-Host ""
 # Check if Flutter is installed
 Write-Host "Checking Flutter installation..." -ForegroundColor Yellow
 try {
-    $flutterVersion = flutter --version 2>$null
+    flutter --version 2>$null | Out-Null
     if ($LASTEXITCODE -eq 0) {
         Write-Host "✓ Flutter is installed" -ForegroundColor Green
     }
