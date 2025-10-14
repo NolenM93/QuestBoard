@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:questboard_app/providers/auth_provider.dart';
+import 'package:questboard_app/screens/login_screen.dart';
+import 'package:questboard_app/screens/main_navigation_screen.dart';
 import 'package:questboard_app/utils/constants.dart';
 
 void main() async {
@@ -9,11 +12,6 @@ void main() async {
   // Initialize Hive
   await Hive.initFlutter();
   
-  // TODO: Register Hive adapters here
-  // Hive.registerAdapter(UserAdapter());
-  // Hive.registerAdapter(QuestAdapter());
-  // etc...
-  
   runApp(
     const ProviderScope(
       child: QuestBoardApp(),
@@ -21,11 +19,13 @@ void main() async {
   );
 }
 
-class QuestBoardApp extends StatelessWidget {
+class QuestBoardApp extends ConsumerWidget {
   const QuestBoardApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final userAsync = ref.watch(currentUserProvider);
+
     return MaterialApp(
       title: AppConstants.appName,
       debugShowCheckedModeBanner: false,
@@ -82,7 +82,13 @@ class QuestBoardApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.system,
-      home: const SplashScreen(),
+      home: userAsync.when(
+        data: (user) => user != null
+            ? const MainNavigationScreen()
+            : const LoginScreen(),
+        loading: () => const SplashScreen(),
+        error: (_, __) => const LoginScreen(),
+      ),
     );
   }
 }
@@ -113,7 +119,7 @@ class SplashScreen extends StatelessWidget {
                 width: 120,
                 height: 120,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
+                  color: Colors.white.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(AppRadius.xl),
                 ),
                 child: Icon(
@@ -134,7 +140,7 @@ class SplashScreen extends StatelessWidget {
               Text(
                 AppConstants.appTagline,
                 style: AppTextStyles.bodyLarge.copyWith(
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                 ),
               ),
               const SizedBox(height: AppSpacing.xxl),
@@ -145,7 +151,7 @@ class SplashScreen extends StatelessWidget {
               Text(
                 'Loading your adventure...',
                 style: AppTextStyles.bodyMedium.copyWith(
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.white.withValues(alpha: 0.8),
                 ),
               ),
             ],
