@@ -35,6 +35,8 @@ class HomeScreen extends ConsumerWidget {
                 const SizedBox(height: AppSpacing.lg),
                 _buildQuickStats(user, context),
                 const SizedBox(height: AppSpacing.lg),
+                _buildQuestOverview(context),
+                const SizedBox(height: AppSpacing.lg),
                 _buildActiveQuests(context),
                 const SizedBox(height: AppSpacing.lg),
                 _buildRecentAchievements(context),
@@ -225,6 +227,118 @@ class HomeScreen extends ConsumerWidget {
     );
   }
 
+  Widget _buildQuestOverview(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+      child: Container(
+        padding: const EdgeInsets.all(AppSpacing.lg),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(AppRadius.md),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Quest Overview',
+                  style: AppTextStyles.h3.copyWith(
+                    color: AppColors.textPrimary,
+                  ),
+                ),
+                Icon(
+                  Icons.trending_up,
+                  color: AppColors.success,
+                ),
+              ],
+            ),
+            const SizedBox(height: AppSpacing.md),
+            Row(
+              children: [
+                Expanded(
+                  child: _buildOverviewItem(
+                    'Active',
+                    '0',
+                    AppColors.primary,
+                  ),
+                ),
+                Expanded(
+                  child: _buildOverviewItem(
+                    'Completed',
+                    '0',
+                    AppColors.success,
+                  ),
+                ),
+                Expanded(
+                  child: _buildOverviewItem(
+                    'This Week',
+                    '0',
+                    AppColors.secondary,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: AppSpacing.sm),
+            Container(
+              padding: const EdgeInsets.all(AppSpacing.sm),
+              decoration: BoxDecoration(
+                color: AppColors.primary.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(AppRadius.sm),
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.info_outline,
+                    size: 16,
+                    color: AppColors.primary,
+                  ),
+                  const SizedBox(width: AppSpacing.sm),
+                  Expanded(
+                    child: Text(
+                      'Create your first quest to start tracking progress!',
+                      style: AppTextStyles.bodySmall.copyWith(
+                        color: AppColors.primary,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildOverviewItem(String label, String value, Color color) {
+    return Column(
+      children: [
+        Text(
+          value,
+          style: AppTextStyles.h2.copyWith(
+            color: color,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          label,
+          style: AppTextStyles.bodySmall.copyWith(
+            color: AppColors.textSecondary,
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _buildActiveQuests(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -242,7 +356,15 @@ class HomeScreen extends ConsumerWidget {
               ),
               TextButton(
                 onPressed: () {
-                  // Navigate to quest list - placeholder
+                  // Navigate to quest page by using the main navigation
+                  // This will need to be implemented with proper navigation
+                  // For now, show a message
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Navigate to Quests tab to view all quests'),
+                      duration: Duration(seconds: 2),
+                    ),
+                  );
                 },
                 child: const Text('View All'),
               ),
@@ -251,7 +373,7 @@ class HomeScreen extends ConsumerWidget {
         ),
         const SizedBox(height: AppSpacing.sm),
         SizedBox(
-          height: 160,
+          height: 180, // Increased height to accommodate content
           child: ListView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
@@ -281,27 +403,35 @@ class HomeScreen extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
-            Icons.add_task,
-            size: 48,
+            Icons.task_outlined,
+            size: 40,
             color: AppColors.primary.withValues(alpha: 0.5),
           ),
-          const SizedBox(height: AppSpacing.md),
+          const SizedBox(height: AppSpacing.sm),
           Text(
             'No Active Quests',
             style: AppTextStyles.h4.copyWith(
               color: AppColors.textSecondary,
             ),
           ),
+          const SizedBox(height: AppSpacing.xs),
+          Text(
+            'Start your adventure!',
+            style: AppTextStyles.bodySmall.copyWith(
+              color: AppColors.textSecondary,
+            ),
+            textAlign: TextAlign.center,
+          ),
           const SizedBox(height: AppSpacing.sm),
-          ElevatedButton.icon(
+          OutlinedButton.icon(
             onPressed: () {
-              // Create quest screen - placeholder
+              // Navigate to quests page - will be implemented with navigation
             },
-            icon: const Icon(Icons.add),
-            label: const Text('Create Quest'),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.primary,
-              foregroundColor: Colors.white,
+            icon: const Icon(Icons.arrow_forward),
+            label: const Text('Go to Quests'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: AppColors.primary,
+              side: BorderSide(color: AppColors.primary),
             ),
           ),
         ],
