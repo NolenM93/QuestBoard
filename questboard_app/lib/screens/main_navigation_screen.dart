@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:questboard_app/screens/home_screen.dart';
+import 'package:questboard_app/screens/quests_screen.dart';
 import 'package:questboard_app/utils/constants.dart';
 
 class MainNavigationScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
   final List<Widget> _screens = [
     const HomeScreen(),
-    const QuestsPlaceholder(),
+    const QuestsScreen(),
     const AchievementsPlaceholder(),
     const TeamPlaceholder(),
     const ProfilePlaceholder(),
@@ -59,53 +60,11 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           ),
         ],
       ),
-      floatingActionButton: _currentIndex == 1 ? FloatingActionButton(
-        onPressed: () {
-          // TODO: Navigate to create quest
-        },
-        child: const Icon(Icons.add),
-      ) : null,
     );
   }
 }
 
 // Placeholder screens
-class QuestsPlaceholder extends StatelessWidget {
-  const QuestsPlaceholder({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Quests')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.task_outlined,
-              size: 80,
-              color: AppColors.primary.withValues(alpha: 0.5),
-            ),
-            const SizedBox(height: AppSpacing.lg),
-            Text(
-              'Quest Board',
-              style: AppTextStyles.h2.copyWith(
-                color: AppColors.textSecondary,
-              ),
-            ),
-            const SizedBox(height: AppSpacing.sm),
-            Text(
-              'Coming Soon!',
-              style: AppTextStyles.bodyLarge.copyWith(
-                color: AppColors.textSecondary,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 class AchievementsPlaceholder extends StatelessWidget {
   const AchievementsPlaceholder({super.key});
